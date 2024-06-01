@@ -10,7 +10,7 @@
   /* width: 66rem; */
   padding: 2rem;
 
-  z-index: 1;
+  z-index: 100;
   background-color: #fff;
   border-bottom: 0.1rem solid var(--color-grey);
 }
@@ -18,7 +18,7 @@
 .header-cart {
   height: 64rem;
   padding: 4rem 0;
-  z-index: 999;
+  z-index: 300;
   overflow-y: auto;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -263,6 +263,10 @@ button {
 @media (max-width: 41.3em) {
   .cart-checkout {
     width: unset;
+  }
+
+  .pageTracker {
+    display: none;
   }
 
   .cart-header {
