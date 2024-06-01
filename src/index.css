@@ -675,7 +675,7 @@ a::after {
   }
 
   .lists.hidden {
-    transform: translatey(-120%);
+    transform: translatey(-200%);
   }
 
   .lists.active {
