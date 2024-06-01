@@ -1,5 +1,11 @@
+import HomeWrapper from "../features/home/HomeWrapper";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <HomeWrapper />
+    </div>
+  );
 }
 
 export default Home;

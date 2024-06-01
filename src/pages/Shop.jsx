@@ -1,5 +1,12 @@
+import "../features/shop/Shop.css";
+import ShopWrapper from "../features/shop/ShopWrapper";
+
 function Shop() {
-  return <div>shop</div>;
+  return (
+    <div className="shop-item">
+      <ShopWrapper />
+    </div>
+  );
 }
 
 export default Shop;
