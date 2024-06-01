@@ -3,7 +3,7 @@ import Cart from "./pages/Cart";
 import Shop from "./pages/Shop";
 import NotFound from "./pages/NotFound";
 
-const { BrowserRouter, Routes, Route } = require("react-router-dom");
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
