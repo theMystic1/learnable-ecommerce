@@ -6,11 +6,13 @@ import NotFound from "./pages/NotFound";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import { Toaster } from "react-hot-toast";
+import ScrollToTopOnMount from "./ui/ScrollToTop";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTopOnMount />
         <Routes>
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="/products" />} />

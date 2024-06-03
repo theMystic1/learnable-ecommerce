@@ -18,7 +18,7 @@ function MainNav() {
         <Logo />
         <span className={`lists ${isOpen ? "active" : "hidden"}`}>
           <NavLink to="/">Home</NavLink>
-          <NavLink to="/shop">Shop</NavLink> <NavLink to="/">About</NavLink>
+          <NavLink to="/">Shop</NavLink> <NavLink to="/">About</NavLink>
           <NavLink to="/">Blog</NavLink> <NavLink to="/">Contact</NavLink>
           <NavLink to="/">Pages</NavLink>
         </span>

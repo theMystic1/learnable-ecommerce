@@ -3,8 +3,9 @@ import Button from "../../ui/Button";
 import StarRating from "../../ui/StarRating";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, removeItem } from "../../services/redux/cartSlice";
+import Spinner from "../../ui/Spinner";
 
-function ShopItem({ data }) {
+function ShopItem({ data, isLoading }) {
   const color = ["#23a6f0", "#2dc071", "#e77c40", "#252b42"];
   const [img, setImg] = useState(0);
 
@@ -34,6 +35,8 @@ function ShopItem({ data }) {
   // console.log(cart);
 
   const isInCart = cart.items.some((item) => item.id === data.id);
+
+  if (isLoading) return <Spinner />;
 
   return (
     <>

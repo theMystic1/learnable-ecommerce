@@ -5,6 +5,7 @@ import Brands from "./Brands";
 import ShopDet from "./ShopDet";
 import ShopItem from "./ShopItem";
 import ShopNav from "./ShopNav";
+import Spinner from "../../ui/Spinner";
 
 function ShopWrapper() {
   const { id } = useParams();
@@ -13,10 +14,10 @@ function ShopWrapper() {
 
   if (isError) return <p>{error?.message}</p>;
 
-  if (isLoading) return <p>Loading....</p>;
+  if (isLoading) return <Spinner />;
   return (
     <div>
-      <ShopItem data={data} />
+      <ShopItem data={data} isLoading={isLoading} />
       <ShopNav data={data} />
       <ShopDet data={data} />
       <BestProducts data={data} />
