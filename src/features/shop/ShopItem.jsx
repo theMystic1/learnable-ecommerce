@@ -4,6 +4,7 @@ import StarRating from "../../ui/StarRating";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem, removeItem } from "../../services/redux/cartSlice";
 import Spinner from "../../ui/Spinner";
+import toast from "react-hot-toast";
 
 function ShopItem({ data, isLoading }) {
   const color = ["#23a6f0", "#2dc071", "#e77c40", "#252b42"];
@@ -30,6 +31,16 @@ function ShopItem({ data, isLoading }) {
 
   function handleRemoveItem() {
     dispatch(removeItem(data.id));
+  }
+
+  function handleAddRemoveCart(id) {
+    if (isInCart) {
+      handleRemoveItem(id);
+      toast.success(`${title} removed from cart`);
+    } else {
+      handleAddItem();
+      toast.success(`${title} added to cart`);
+    }
   }
 
   // console.log(cart);
@@ -99,7 +110,7 @@ function ShopItem({ data, isLoading }) {
                 <button
                   className={`img-btn ${isInCart ? "cartActive" : ""}`}
                   onClick={() => {
-                    isInCart ? handleRemoveItem(data.id) : handleAddItem();
+                    handleAddRemoveCart(data.id);
                   }}
                 >
                   <img

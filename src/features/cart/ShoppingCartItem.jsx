@@ -5,6 +5,7 @@ import {
   decrementQuantity,
 } from "../../services/redux/cartSlice";
 import StarRating from "../../ui/StarRating";
+import toast from "react-hot-toast";
 
 function ShoppingCartItem({ item }) {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ function ShoppingCartItem({ item }) {
 
   function handleRemoveItem() {
     dispatch(removeItem(id));
+    toast.success(`${title} removed from cart`);
   }
 
   function handleIncItems() {
